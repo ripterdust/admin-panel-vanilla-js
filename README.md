@@ -1,0 +1,1 @@
+# Admin panel made with vanilla js
