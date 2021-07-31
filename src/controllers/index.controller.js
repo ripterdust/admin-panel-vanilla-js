@@ -12,7 +12,8 @@ const fetchData = async (component) => {
     document.querySelector('#products').innerHTML = products;
     document.querySelector('#agents').innerHTML = agents;
     document.querySelector('#sales').innerHTML = sales;
-    console.table(lastSales)
+
+
     let table = document.querySelector('#recentSales');
     lastSales.map(({id, agent_id, product_id, product_code}) => {
         table.innerHTML += `
