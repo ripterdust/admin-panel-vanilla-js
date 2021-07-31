@@ -1,4 +1,5 @@
 import { NotFound404 } from "../controllers/404.controller";
+import { Agents } from "../controllers/agent.controller";
 import { Index } from "../controllers/index.controller";
 import { Products } from "../controllers/products.controller";
 import { Sales } from "../controllers/sales.controller";
@@ -21,7 +22,9 @@ export const router = (route) => {
         
         case '#/sales':
             return root.appendChild(Sales());
-            
+        
+        case '#/agents':
+            return root.appendChild(Agents())
         default:
             return root.appendChild(NotFound404());
     }
