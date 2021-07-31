@@ -1,0 +1,25 @@
+.cards
+    padding: 1em 2em
+    width: 100%
+    height: 20%
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    margin: auto
+    column-gap: 1em
+
+    .card
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        height: 15vh
+        border-radius: 10px
+        overflow: hidden
+
+        i
+            width: 100%
+            height: 100%
+            background: $danger
+            display: flex
+            justify-content: center
+            align-items: center
+            color: white
+            font-size: 50px
