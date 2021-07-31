@@ -33,6 +33,7 @@ nav
             width: 100%
             position: relative
             z-index: 1
+            transition: .3s ease-in-out
 
             &::before
                 content: ''
@@ -43,9 +44,12 @@ nav
                 width: 0 
                 height: 3px   
                 z-index: -1
-                transition: .3s ease-in-out
+                transition: .2s ease-in-out
 
-            &:hover:before
-                width: 100%
-                left: 0
+            &:hover
+                color: #4A00E0
+                letter-spacing: 2px
+                &::before
+                    width: 100%
+                    left: 0
                     
