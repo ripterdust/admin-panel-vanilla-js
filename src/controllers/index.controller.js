@@ -32,7 +32,7 @@ const fetchData = async (component) => {
 export const Index = () => {
 
     const component = document.createElement('div');
-    component.classList.add('index-screen');
+    component.classList.add('p-6');
     component.innerHTML = view;
 
     fetchData(component);
