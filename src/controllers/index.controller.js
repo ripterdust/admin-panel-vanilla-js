@@ -1,6 +1,6 @@
 import axios from 'axios';
 import view from '../views/index.view.html';
-
+import '../styles/index.scss'
 
 const fetchData = async (component) => {
     
