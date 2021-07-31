@@ -1,3 +1,4 @@
+import { NotFound404 } from "../controllers/404.controller";
 import { Index } from "../controllers/index.controller";
 import { Products } from "../controllers/products.controller";
 
@@ -18,6 +19,6 @@ export const router = (route) => {
             return root.appendChild(Products());
 
         default:
-            console.log(404);
+            return root.appendChild(NotFound404());
     }
 }
