@@ -9,12 +9,12 @@ const fetchData = async (component) => {
 
     let { agents, lastSales, sales, products } = data;
 
-    document.querySelector('#products').innerHTML = products;
-    document.querySelector('#agents').innerHTML = agents;
-    document.querySelector('#sales').innerHTML = sales;
+    component.querySelector('#products').innerHTML = products;
+    component.querySelector('#agents').innerHTML = agents;
+    component.querySelector('#sales').innerHTML = sales;
 
 
-    let table = document.querySelector('#recentSales');
+    let table = component.querySelector('#recentSales');
     lastSales.map(({id, agent_id, product_id, product_code}) => {
         table.innerHTML += `
             <tr>
