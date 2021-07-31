@@ -1,7 +1,7 @@
 import { router } from './router/index.routes';
 
 // Importing styles with sass
-import './main.sass'
+// import './main.sass'
 
 router(window.location.hash)
 
