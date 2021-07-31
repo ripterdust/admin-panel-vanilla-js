@@ -1,13 +1,18 @@
+import axios from 'axios';
 import view from '../views/index.view.html';
 
 
-const getTotalData = (component) => {
+const fetchData = async (component) => {
+    
+    let url = 'http://localhost:3000'
+    let { data } = await axios.get(url);
 
-    let numbers = component.querySelectorAll('.number');
+    let { agents, lastSales, sales, products } = data;
 
-    numbers.forEach(element => {
-        element.innerHTML = 1
-    });
+    document.querySelector('#products').innerHTML = products;
+    document.querySelector('#agents').innerHTML = agents;
+    document.querySelector('#sales').innerHTML = sales;
+
 }
 
 
@@ -17,8 +22,7 @@ export const Index = () => {
     component.classList.add('index-screen');
     component.innerHTML = view;
 
-    getTotalData(component);
-
+    fetchData(component);
 
 
     return component;
