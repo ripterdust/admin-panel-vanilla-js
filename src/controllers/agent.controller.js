@@ -1,5 +1,7 @@
 import axios from 'axios';
 import view from '../views/agents.view.html';
+import '../styles/agents.scss';
+
 
 const getData = async () => {
 
