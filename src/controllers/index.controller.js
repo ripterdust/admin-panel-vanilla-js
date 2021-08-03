@@ -19,10 +19,10 @@ const fetchData = async (component) => {
     lastSales.map(({id, agent_id, product_id, product_code}) => {
         table.innerHTML += `
             <tr class="text-center hover:bg-gray-50">
-                <td class="p-4">${id}</td>
-                <td class="p-4">${agent_id}</td>
-                <td class="p-4">${product_id}</td>
-                <td class="p-4">${product_code}</td>
+                <td class="p-1">${id}</td>
+                <td class="p-1">${agent_id}</td>
+                <td class="p-1">${product_id}</td>
+                <td class="p-1">${product_code}</td>
             </tr>
         `;
     })
