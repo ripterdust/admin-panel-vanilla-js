@@ -34,6 +34,9 @@ export const Index = () => {
 
     const component = document.createElement('div');
     component.classList.add('p-6');
+    component.classList.add('animate_animated');
+    component.classList.add('animate__fadeIn');
+
     component.innerHTML = view;
 
     fetchData(component);
