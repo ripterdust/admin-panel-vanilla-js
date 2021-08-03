@@ -27,7 +27,6 @@ const getData = async (render = true) => {
     var { agents } = data;
     renderAgents(agents)
     allData = [...agents]
-    console.log(allData)
 };
 
 
