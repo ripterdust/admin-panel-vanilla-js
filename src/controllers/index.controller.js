@@ -15,15 +15,16 @@ const fetchData = async (component) => {
 
 
     let table = component.querySelector('#recentSales');
+
     lastSales.map(({id, agent_id, product_id, product_code}) => {
         table.innerHTML += `
-            <tr>
-                <td>${id}</td>
-                <td>${agent_id}</td>
-                <td>${product_id}</td>
-                <td>${product_code}</td>
+            <tr class="text-center hover:bg-gray-50">
+                <td class="p-4">${id}</td>
+                <td class="p-4">${agent_id}</td>
+                <td class="p-4">${product_id}</td>
+                <td class="p-4">${product_code}</td>
             </tr>
-        `
+        `;
     })
 
 }

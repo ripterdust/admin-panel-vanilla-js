@@ -5,7 +5,7 @@ import { Products } from "../controllers/products.controller";
 import { Sales } from "../controllers/sales.controller";
 
 let root = document.querySelector('#root');
-
+let div = document.createElement('div');
 export const router = (route) => {
     root.innerHTML = '';
     
@@ -24,7 +24,7 @@ export const router = (route) => {
             return root.appendChild(Sales());
         
         case '#/agents':
-            return root.appendChild(Agents())
+            return root.appendChild(Agents());
         default:
             return root.appendChild(NotFound404());
     }
