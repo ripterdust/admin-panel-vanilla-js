@@ -7,7 +7,17 @@ var allData = [];
 const renderAgents = (data) => {
     let agentsDiv = document.querySelector('#agentsList');
 
-    agentsDiv.innerHTML = '';
+    agentsDiv.innerHTML = `<tr class="bg-white">
+        <th class="p-2">
+            Id
+        </th>
+        <th class="p-2">
+            First name
+        </th>
+        <th class="p-2">
+            Last name
+        </th>
+    </tr>`;
     data.map(({ id, firstname, lastname }) => {
         agentsDiv.innerHTML += `<tr class="text-center hover:bg-gray-50">
             <td class="p-1">${id}</td>
