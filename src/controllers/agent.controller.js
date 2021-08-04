@@ -58,7 +58,30 @@ export const Agents = () => {
         })
 
         renderAgents(filteredData)
-    })
+
+        
+    });
+    
+    // processing form;
+    const agentForm = container.querySelector('#agentForm');
+    agentForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        let { elements } = e.target;
+        let data = {
+            firstname : elements[0].value,
+            lastname: elements[1].value
+        };
+        console.log(data)
+        let url = 'http://localhost:3000';
+        axios({
+            method: 'post',
+            url,
+            data
+        });
+    });
+
+
     return container;
 
 }
