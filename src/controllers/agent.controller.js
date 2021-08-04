@@ -39,7 +39,6 @@ const getData = async (render = true) => {
     allData = [...agents]
 };
 
-
 export const Agents = () => {
     let container = document.createElement('div');
 
@@ -72,13 +71,21 @@ export const Agents = () => {
             firstname : elements[0].value,
             lastname: elements[1].value
         };
-        console.log(data)
-        let url = 'http://localhost:3000';
-        axios({
-            method: 'post',
-            url,
-            data
-        });
+
+        if(data.firstname.length <= 0 || data.lastname.length <= 0){
+            alert('Insert valid data');
+        }else{
+
+            let url = 'http://localhost:3000/newAgent';
+            axios({
+                method: 'post',
+                url,
+                data
+            });
+            getData();
+            
+        }
+
     });
 
 
