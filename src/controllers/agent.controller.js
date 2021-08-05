@@ -82,7 +82,9 @@ export const Agents = () => {
                 url,
                 data
             });
-            getData();
+            setTimeout(() => {
+                getData();
+            }, 2000)
             
         }
 
