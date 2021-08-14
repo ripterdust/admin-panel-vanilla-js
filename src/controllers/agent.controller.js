@@ -45,7 +45,7 @@ const renderAgents = (data) => {
     for(const agent of allAgents){
         agent.addEventListener('click', ({ target }) => {
             let agentId = target.getAttribute("agentId");
-            console.log(agentId)
+            deleteAgent(agentId)
             renderAgents(data)
         })
     }
