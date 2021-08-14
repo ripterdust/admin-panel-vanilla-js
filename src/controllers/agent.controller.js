@@ -5,7 +5,7 @@ import { deleteAgentHelper } from '../helpers/deleteAgent.helper';
 
 var allData = [];
 
-const renderAgents = (data) => {
+const renderAgents = async (data) => {
     let agentsDiv = document.querySelector('#agentsList');
     agentsDiv.innerHTML = `<tr class="bg-white">
     <th class="p-2">
@@ -45,8 +45,9 @@ const renderAgents = (data) => {
     for(const agent of allAgents){
         agent.addEventListener('click', ({ target }) => {
             let agentId = target.getAttribute("agentId");
-            deleteAgentHelper(agentId)
-            getData()
+            deleteAgentHelper(agentId);
+            location.reload();
+
         })
     }
 
