@@ -1,7 +1,7 @@
 import axios from 'axios';
 import view from '../views/agents.view.html';
 import '../styles/agents.scss';
-
+import { deleteAgentHelper } from '../helpers/deleteAgent.helper';
 
 var allData = [];
 
@@ -45,7 +45,7 @@ const renderAgents = (data) => {
     for(const agent of allAgents){
         agent.addEventListener('click', ({ target }) => {
             let agentId = target.getAttribute("agentId");
-            deleteAgent(agentId)
+            deleteAgentHelper(agentId)
             renderAgents(data)
         })
     }
