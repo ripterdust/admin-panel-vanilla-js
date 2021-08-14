@@ -8,6 +8,6 @@ export const deleteAgentHelper = (id) => {
             .then((res) => {console.log(res)})
             .catch(err => console.log(err))
     }catch(err){
-        alert('Ha ocurrido un error al eliminar al agente');
+        alert('Unable to delete agent');
     }
 }
