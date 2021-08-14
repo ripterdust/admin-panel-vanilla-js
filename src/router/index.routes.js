@@ -6,7 +6,6 @@ import { Sales } from "../controllers/sales.controller";
 import { Settings } from "../controllers/settings.controller";
 
 let root = document.querySelector('#root');
-let div = document.createElement('div');
 export const router = (route) => {
     root.innerHTML = '';
     
